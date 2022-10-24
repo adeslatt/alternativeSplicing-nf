@@ -1,0 +1,79 @@
+#---------------------------------------------------------------------
+#
+# Name:  alternativeSplicing-nf-pseudo-code.txt
+# Purpose: write down the steps for this workflow
+#          With the flow - containerize each of the steps/libraries
+#          to achieve appropriate portability and sustainabilit
+#
+# Author:  Anne DeslattesMays
+# Date:    October 17, 2022
+#
+#---------------------------------------------------------------------
+#
+#
+#
+# Step 0 - publishDir details - where should we put them.
+#
+# Step 1 - Assuming input are fastq files - Trimmomatic
+#
+#          Containerize with Anaconda - noarch version is 0.39
+#
+#          To install the `noarch` version
+#          use: 
+conda install bioconda/noarch::trimmomatic
+
+Collecting package metadata (current_repodata.json): done
+Solving environment: done
+
+
+==> WARNING: A newer version of conda exists. <==
+  current version: 4.14.0
+  latest version: 22.9.0
+
+Please update conda by running
+
+    $ conda update -n base -c defaults conda
+
+
+
+## Package Plan ##
+
+  environment location: /Users/deslattesmaysa2/opt/anaconda3/envs/as
+
+  added / updated specs:
+    - bioconda/noarch::trimmomatic
+
+
+The following packages will be downloaded:
+
+    package                    |            build
+    ---------------------------|-----------------
+    openjdk-11.0.13            |       h8346a28_0       166.6 MB
+    trimmomatic-0.39           |       hdfd78af_2         144 KB  bioconda
+    ------------------------------------------------------------
+                                           Total:       166.7 MB
+
+The following NEW packages will be INSTALLED:
+
+  openjdk            pkgs/main/osx-64::openjdk-11.0.13-h8346a28_0
+  trimmomatic        bioconda/noarch::trimmomatic-0.39-hdfd78af_2
+
+The following packages will be SUPERSEDED by a higher-priority channel:
+
+  ca-certificates    conda-forge::ca-certificates-2022.9.2~ --> pkgs/main::ca-certificates-2022.07.19-hecd8cb5_0
+#
+#          From this site 
+#          Trimmomatic: A flexible read trimming tool for Illumina NGS data
+#
+#          Citations
+#          Bolger, A. M., Lohse, M., & Usadel, B. (2014). Trimmomatic: A flexible trimmer for Illumina Sequence Data. Bioinformatics, btu170.
+#
+#          from this location:#
+#          http://www.usadellab.org/cms/?page=trimmomatic
+#
+#          we learn that starting with version 0.40 code is found on GitHub
+#          https://github.com/usadellab/Trimmomatic
+#          
+#
+#          
+

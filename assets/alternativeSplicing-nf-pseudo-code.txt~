@@ -1,0 +1,39 @@
+#---------------------------------------------------------------------
+#
+# Name:  alternativeSplicing-nf-pseudo-code.txt
+# Purpose: write down the steps for this workflow
+#          With the flow - containerize each of the steps/libraries
+#          to achieve appropriate portability and sustainabilit
+#
+# Author:  Anne DeslattesMays
+# Date:    October 17, 2022
+#
+#---------------------------------------------------------------------
+#
+#
+#
+# Step 0 - publishDir details - where should we put them.
+#
+# Step 1 - Assuming input are fastq files - Trimmomatic
+#
+#          Containerize with Anaconda - noarch version is 0.39
+#
+#          To install the `noarch` version
+#          use: 
+#          conda install -c bioconda/noarch::trimmomatic
+#
+#          From this site 
+#          Trimmomatic: A flexible read trimming tool for Illumina NGS data
+#
+#          Citations
+#          Bolger, A. M., Lohse, M., & Usadel, B. (2014). Trimmomatic: A flexible trimmer for Illumina Sequence Data. Bioinformatics, btu170.
+#
+#          from this location:#
+#          http://www.usadellab.org/cms/?page=trimmomatic
+#
+#          we learn that starting with version 0.40 code is found on GitHub
+#          https://github.com/usadellab/Trimmomatic
+#          
+#
+#          
+
