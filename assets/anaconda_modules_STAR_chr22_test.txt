@@ -1,0 +1,16 @@
+conda install -c conda-forge gh -y
+conda install -c conda-forge mamba -y
+gh auth login 
+git pull https://github.com/adeslatt/alternativeSplicing-nf.git
+git clone https://github.com/adeslatt/alternativeSplicing-nf.git
+cd alternativeSplicing-nf/
+mamba install -c conda-forge emacs -y
+git clone https://github.com/TheJacksonLaboratory/splicing-pipelines-nf.git
+cd alternativeSplicing-nf/
+cd alternativeSplicing-nf/
+mamba install -c bioconda star -y
+mamba install -c bioconda trimmomatic -y
+mkdir data
+cd data
+mkdir test_data
+STAR --runMode genomeGenerate --genomeDir test_data --genomeFastaFiles /sbgenomics/project-files/GRCh38.primary_assembly.genome.chr22.fa --sjdbGTFfile /sbgenomics/project-files/gencode.v35.annotation.chr22.gtf --sjdbOverhang 50 --outFileNamePrefix chr22
